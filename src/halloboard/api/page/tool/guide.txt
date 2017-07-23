@@ -1,0 +1,1 @@
+tool\gs.exe -dNOPAUSE -dBATCH -sDEVICE=png16m -dFirstPage=1 -dLastPage=1 -sOutputFile="image\Pic-%d.png" -r150 input.pdf

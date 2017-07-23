@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8" ?> 
-<application xmlns="http://ns.adobe.com/air/application/21.0">
-	
-	<id>BookContentCompressor</id> 
-	<versionNumber>1.0</versionNumber> 
-	<filename>BookContentCompressor</filename> 
-	
-	<name>BookContentCompressor</name> 
-	<description></description> 
-	<copyright></copyright> 
-	
-	<initialWindow> 
-		<title>BookContentCompressor</title> 
-		<content>BookContentCompressor.swf</content> 
-		<systemChrome>standard</systemChrome> 
-		<transparent>false</transparent> 
-		<visible>true</visible> 
-		<minimizable>true</minimizable> 
-		<maximizable>true</maximizable> 
-		<resizable>true</resizable> 
-	</initialWindow> 
-	
-	<!-- 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/23.0">
+  <id>BookContentCompressor</id>
+  <versionNumber>1.0</versionNumber>
+  <filename>BookContentCompressor</filename>
+  <name>BookContentCompressor</name>
+  <initialWindow>
+    <title>BookContentCompressor</title>
+    <content>BookContentCompressor.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <minimizable>true</minimizable>
+    <maximizable>true</maximizable>
+    <resizable>true</resizable>
+    <renderMode>direct</renderMode>
+  </initialWindow>
+  <!-- 
 	More options:
 	http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
 	-->
+  <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" xmlns:android="http://schemas.android.com/apk/res/android" />]]></manifestAdditions>
+  </android>
 </application>
