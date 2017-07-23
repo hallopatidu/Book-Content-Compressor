@@ -5,7 +5,7 @@ Book Content Compressor
 Thư viện chính
 ------------
 
-|Command|Description|
+|Class|Description|
 |---|---|
 |PageConvertor| Sử dụng kèm với GhotScript Tool. Dùng convert file pdf sau đó nén|
 |TexturePageGenerator| Sử dụng nén nội dung sách. Dùng file PNG|
