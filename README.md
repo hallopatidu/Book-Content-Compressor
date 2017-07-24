@@ -93,7 +93,7 @@ Các vấn đề cần nâng cấp
 - Tối ưu việc cắt bỏ khoảng trắng trường hợp có border cả trang
 - Sử dụng Worker tối ưu thời gian compress.
 - Chuyển sang phiên bản server.
-- Thay thế Simple Object detector bằng Cascade Object Detector (Thuật toán Viola-Jones) hoặc sử dụng luôn Tensorflow Object Detection.
+- Thay thế Simple Object Detector bằng Cascade Object Detector (Thuật toán Viola-Jones) hoặc sử dụng luôn Tensorflow Object Detection.
 
 
 
