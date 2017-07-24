@@ -76,7 +76,7 @@ Nén một file PNG dạng trang sách ra texture trong một file nén.
 ```
 
 
-Một số thư viện sử dụng
+Thuật toán và thư viện sử dụng
 ------------
 - Simple object detector (Nhận dạng các object có trong một bức ảnh trên nền trắng)
 - Object Fragment / Defragment (Tối ưu số lượng các object sau khi nhận dạng. Mục tiêu là diện tích texture)
