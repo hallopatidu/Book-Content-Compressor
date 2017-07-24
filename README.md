@@ -1,5 +1,5 @@
 # Book-Content-Compressor
-Một ActionScript 3 API được sử dụng để nén nội dung trang sách bằng cách bỏ khoảng trắng và tối ưu diện tích trang sách. 
+Một ActionScript 3 API được sử dụng để nén nội dung trang sách bằng cách bỏ khoảng trắng.Và tối ưu diện tích trang sách bằng cách sắp xếp lại vị trí các chữ và hình trên trang sách sao cho kích thước trang sách là nhỏ nhất.
 
 Cài đặt
 ------------
@@ -20,42 +20,42 @@ Quick Start
 
 Nén trang sách từ file pdf
 ```shell
-      var targetFile:File = File.applicationDirectory.resolvePath("input.pdf");			
-			var convertor:PageConvertor = new PageConvertor(this);
-			// Neu khong dang ky pageFormat thi chi convert thong thuong. Khong sinh ra texture page.
-			//convertor.registerPageFormat(pageFormat);
-			// Cho phep sinh ra page image ben canh pdf.
-			convertor.allowConvertPageImages = true;
-			convertor.completed.addOnce(function():void { 
-													trace("Convert thanh cong !");
-												});
-			convertor.eachCompleted.add(function(currentPage:int):void {
-													trace("Convert xong page " + currentPage);
-												})
-			
-			//convertor.broswerPDF(2,6,7,8,9); // Compress các trang 2,6,7,8,9
-			//convertor.broswerPDF(2, 6, [7, 9], 21, 23); // Compress các trang 2, 6,  7,8,9  , 21 và 23
-			convertor.broswerPDF(1);  // Chỉ compress trang 1
+	var targetFile:File = File.applicationDirectory.resolvePath("input.pdf");			
+	var convertor:PageConvertor = new PageConvertor(this);
+	// Neu khong dang ky pageFormat thi chi convert thong thuong. Khong sinh ra texture page.
+	//convertor.registerPageFormat(pageFormat);
+	// Cho phep sinh ra page image ben canh pdf.
+	convertor.allowConvertPageImages = true;
+	convertor.completed.addOnce(function():void { 
+						trace("Convert thanh cong !");
+					});
+	convertor.eachCompleted.add(function(currentPage:int):void {
+						trace("Convert xong page " + currentPage);
+					})
+
+	//convertor.broswerPDF(2,6,7,8,9); // Compress các trang 2,6,7,8,9
+	//convertor.broswerPDF(2, 6, [7, 9], 21, 23); // Compress các trang 2, 6,  7,8,9  , 21 và 23
+	convertor.broswerPDF(1);  // Chỉ compress trang 1
 ```
 
 
 Nén một file PNG dạng trang sách ra texture trong một file nén.
 ```shell
-      var generator:TexturePageGenerator = new TexturePageGenerator(this);
-			    generator.registerPageFormat(pageFormat);
-          /*
-          // dispatch khi moi qua trinh sinh page hoan thanh. Dispatch truoc khi save thanh file.
-          generator.pagingCompleted.addOnce(...)
-          // tien trinh phan tich page, tra ve % doi tuong duoc phan tich tren tong so doi tuong.
-          generator.pagingProgress.addOnce(...)
-          // tra ve % so byte duoc load tu page mau
-          generator.loading.addOnce(...)
-          */
-          // dispatch khi save file xong. Day là giai doan cuoi cung cua qua trinh.
-          generator.saveCompleted.addOnce(function():void { trace("save thanh cong !!!") } );
+	var generator:TexturePageGenerator = new TexturePageGenerator(this);
+	generator.registerPageFormat(pageFormat);
+	  /*
+	// dispatch khi moi qua trinh sinh page hoan thanh. Dispatch truoc khi save thanh file.
+	generator.pagingCompleted.addOnce(...)
+	  // tien trinh phan tich page, tra ve % doi tuong duoc phan tich tren tong so doi tuong.
+	generator.pagingProgress.addOnce(...)
+	  // tra ve % so byte duoc load tu page mau
+	generator.loading.addOnce(...)
+	  */
+	  // dispatch khi save file xong. Day là giai doan cuoi cung cua qua trinh.
+	  generator.saveCompleted.addOnce(function():void { trace("save thanh cong !!!") } );
 
-          //generator.loadAndBuild("image.png");
-          generator.loadAndBuild("PAGE3.png");
+	  //generator.loadAndBuild("image.png");
+	  generator.loadAndBuild("PAGE3.png");
 ```
 
 Đọc và tái hiện lại một file đã nén.
