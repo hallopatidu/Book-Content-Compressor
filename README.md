@@ -79,7 +79,7 @@ Nén một file PNG dạng trang sách ra texture trong một file nén.
 Một số thư viện sử dụng
 ------------
 - Simple object detector (Nhận dạng các object có trong một bức ảnh trên nền trắng)
-- Object Fragment / Defragment (Tối ưu số lượng các object sau khi nhận dạng)
+- Object Fragment / Defragment (Tối ưu số lượng các object sau khi nhận dạng. Mục tiêu là diện tích texture)
 - Rectangle Packer (Đã được nâng cấp về hiệu suất từ một class opensource. Sử dụng để sắp xếp các object sao cho tốn ít diện tích nhất của texture)
 - FZIP 
 - SIGNAL 
