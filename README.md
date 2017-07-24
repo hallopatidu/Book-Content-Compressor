@@ -1,7 +1,7 @@
 # Book Content Compressor
 Thư viện AS3 được sử dụng để nén nội dung trang sách bằng cách bỏ khoảng trắng.Và tối ưu diện tích trang sách bằng cách sắp xếp lại vị trí các chữ và hình trên trang sách sao cho kích thước trang sách là nhỏ nhất.
 
-![screenshot](http://imgur.com/a/uz1zT)
+![screenshot](http://imgur.com/iIhiEIN)
 
 Cài đặt
 ------------
