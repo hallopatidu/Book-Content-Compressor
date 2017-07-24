@@ -15,6 +15,60 @@ Các class chính
 |TexturePageGenerator| Sử dụng nén nội dung sách. Dùng file PNG|
 |TexturePageReader| Sử dụng để đọc file đã nén nội dung và hiển thị trang sách |
 
+Quick Start
+-----------
+
+Nén trang sách từ file pdf
+```shell
+      var targetFile:File = File.applicationDirectory.resolvePath("input.pdf");			
+			var convertor:PageConvertor = new PageConvertor(this);
+			// Neu khong dang ky pageFormat thi chi convert thong thuong. Khong sinh ra texture page.
+			//convertor.registerPageFormat(pageFormat);
+			// Cho phep sinh ra page image ben canh pdf.
+			convertor.allowConvertPageImages = true;
+			convertor.completed.addOnce(function():void { 
+													trace("Convert thanh cong !");
+												});
+			convertor.eachCompleted.add(function(currentPage:int):void {
+													trace("Convert xong page " + currentPage);
+												})
+			
+			//convertor.broswerPDF(2,6,7,8,9); // Compress các trang 2,6,7,8,9
+			//convertor.broswerPDF(2, 6, [7, 9], 21, 23); // Compress các trang 2, 6,  7,8,9  , 21 và 23
+			convertor.broswerPDF(1);  // Chỉ compress trang 1
+```
+
+
+Nén một file PNG dạng trang sách ra texture trong một file nén.
+```shell
+      var generator:TexturePageGenerator = new TexturePageGenerator(this);
+			    generator.registerPageFormat(pageFormat);
+          /*
+          // dispatch khi moi qua trinh sinh page hoan thanh. Dispatch truoc khi save thanh file.
+          generator.pagingCompleted.addOnce(...)
+          // tien trinh phan tich page, tra ve % doi tuong duoc phan tich tren tong so doi tuong.
+          generator.pagingProgress.addOnce(...)
+          // tra ve % so byte duoc load tu page mau
+          generator.loading.addOnce(...)
+          */
+          // dispatch khi save file xong. Day là giai doan cuoi cung cua qua trinh.
+          generator.saveCompleted.addOnce(function():void { trace("save thanh cong !!!") } );
+
+          //generator.loadAndBuild("image.png");
+          generator.loadAndBuild("PAGE3.png");
+```
+
+Đọc và tái hiện lại một file đã nén.
+```shell
+        var reader:TexturePageReader = new TexturePageReader();
+            reader.registerPageFormat(pageFormat);
+            reader.completed.addOnce(onParsingCompletedHandler);
+            reader.load("image.zip");
+     
+        function onParsingCompletedHandler():void {
+            starling.stage.addChild(reader.getStarlingPage());
+        }
+```
 
 
 Một số thư viện sử dụng
@@ -26,6 +80,8 @@ Một số thư viện sử dụng
 - SIGNAL 
 - Starling 
 - Promise (Phiên bản AS3)
-
 - Ghost Script (Tool convert)
-- 
+ 
+
+
+@Author: Hallopatidu@gmail.com
