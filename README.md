@@ -25,6 +25,7 @@ Quick Start
 
 Nén trang sách từ file pdf
 ```shell
+	var pageFormat:IPageFormat = new StarlingEditorFormat();
 	var targetFile:File = File.applicationDirectory.resolvePath("input.pdf");			
 	var convertor:PageConvertor = new PageConvertor(this);
 	// Neu khong dang ky pageFormat thi chi convert thong thuong. Khong sinh ra texture page.
@@ -46,6 +47,7 @@ Nén trang sách từ file pdf
 
 Nén một file PNG dạng trang sách ra texture trong một file nén.
 ```shell
+	var pageFormat:IPageFormat = new StarlingEditorFormat();
 	var generator:TexturePageGenerator = new TexturePageGenerator(this);
 	generator.registerPageFormat(pageFormat);
 	  /*
@@ -65,6 +67,7 @@ Nén một file PNG dạng trang sách ra texture trong một file nén.
 
 Đọc và tái hiện lại một file đã nén.
 ```shell
+	var pageFormat:IPageFormat = new StarlingEditorFormat();
         var reader:TexturePageReader = new TexturePageReader();
             reader.registerPageFormat(pageFormat);
             reader.completed.addOnce(onParsingCompletedHandler);
