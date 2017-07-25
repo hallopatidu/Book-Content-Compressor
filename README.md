@@ -1,5 +1,5 @@
 # Book Content Compressor
-Một API viết bằng AS3 - Adobe AIR, sử dụng để nén nội dung trang sách bằng cách bỏ khoảng trắng.Và tối ưu diện tích trang sách bằng cách sắp xếp lại vị trí các chữ và hình trên trang sách sao cho kích thước trang sách là nhỏ nhất. Mục đích là tiết kiệm texture khi sử dụng trên mobile.
+Một API viết bằng ActionScript 3 - Adobe AIR, sử dụng để nén nội dung trang sách bằng cách bỏ khoảng trắng.Và tối ưu diện tích trang sách bằng cách sắp xếp lại vị trí các chữ và hình trên trang sách sao cho kích thước trang sách là nhỏ nhất. Mục đích là tiết kiệm texture khi sử dụng trên mobile.
 
 ![screenshot](http://i.imgur.com/zR1lXkL.png)
 
